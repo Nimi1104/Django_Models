@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="HandheldFriendly" content="true">
+        <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+        <link href="{% static 'css/base.css' %}" rel="stylesheet">
+        <title>Dapo Adedire's Blog</title>
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;373&family=Lato:wght@400&family=League+Spartan:wght@400&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <div class="nav-left">
+                <h1><a href="{% url 'home' %}">Dapo Adedire's Blog</a></h1>
+            </div>
+            <div class="nav-right">
+              {% if user.is_superuser %}  
+                <a href="{% url 'post_new' %}">+ New Blog Post</a>
+              {% endif %}
+            </div>
+        </header>
+
+        <div>
+            <div class="greetings">
+            {%if user.is_authenticated%}
+                <p id="green">Hi {{ user.username }}!,
+                <a id ="red" href="{% url 'logout' %}">log out.</a></p>
+            {% else %}
+                <p id="red">You are not logged in!,
+                <a id="green" href="{% url 'login' %}"> sign in, </a> 
+                <a id="green" href="{% url 'signup' %}">or sign up.</a></p> 
+            {% endif %}
+            </div>
+
+
+            {% block content %}
+
+            
+            {% endblock content %}
+        </div>
+
+        <footer>
+            <p>Designed and built by <a href="http://wa.me/2349038388723" target="_blank">Dapo Adedire</a> in Nigeria</p>
+            <p>
+                <ul>
+                    <li><a href="http://www.twitter.com/dapo_adedire/" target="_blank">Twitter</a></li>
+                    <li><a href="http://www.linkedin.com/in/dapoadedire" target="_blank">LinkedIn</a></li>
+                    <li><a href="http://www.github.com/dapoadedire/" target="_blank">Github</a></li>
+                </ul>
+            </p>
+        </footer>
+    </body>
+</html>

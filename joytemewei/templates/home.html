@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="about">
+ <h2>About</h2>
+ <p>Hello <img src="https://img.icons8.com/emoji/48/000000/waving-hand-medium-skin-tone.png" height='20px'/>, my name is Adedire Adedapo Farouq. I am a budding backend developer and an undergraduate student of Electrical and Electronics Engineering at the prestigious <a href="https://oauife.edu.ng">Obafemi Awolowo University</a> , Ile-Ife, Osun.<br>This is one of my first project using Django.</p>     
+</div>
+
+    {% for post in object_list %}
+       
+       <div class="post-entry">
+           <h2><a href="{% url 'post_detail' post.pk %}"><u>{{ post.title }}</u></a></h2>
+           <p id='pub' >{{ post.datepublished }}</p>
+           {% comment %} <p>{{ post.body | slice:":50" }}</p> {% endcomment %}
+        </div>
+    {% endfor %}
+{% endblock content%}
+         

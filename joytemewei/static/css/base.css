@@ -1,0 +1,136 @@
+header h1 a {
+    color: rgba(212,174,141,.99); 
+    text-decoration: none !important;
+   
+}
+
+
+
+
+header{
+    display: flex;
+    border-bottom: 2px solid rgba(212,174,141,.99); ;
+    margin-bottom: 2rem;
+    font-family: 'Fredoka', sans-serif;
+}
+
+body{
+    background-color: #232323;
+    font-size: 16px;
+    font-weight: 'Fredoka', sans-serif;
+    /* font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.nav-left {
+    margin-right: auto;
+}
+
+.nav-right {
+    display: flex;
+    padding-top: 2rem;
+    font-weight: 900;
+}
+.nav-right a{
+    color: rgba(212,174,141,.99); ;
+}
+
+.about{
+    margin-bottom: 3rem;
+    border-bottom: 2px solid rgba(212,174,141,.99); 
+    padding: 1rem;
+}
+.about a, h2{
+    color: rgba(212,174,141,.99);
+    text-decoration: none;
+}
+
+
+.about h2{
+    font-family: 'League Spartan', sans-serif;
+}
+.about p, .delete, .edit{
+    font-family: 'Lato', serif;
+    color: rgba(212,174,141,.99); 
+}
+
+#pub{
+    font-size: 0.9rem;
+    font-family: 'Lato', sans-serif;
+    color: rgba(212,174,141,.99)  !important;
+}
+
+.post-entry {
+    padding: 15px;
+    margin-bottom: 1rem;
+}
+
+.post-entry h2{
+    font-family: 'League Spartan', sans-serif;
+    margin: 0.5rem 0;
+    text-decoration:none;
+}
+
+.post-entry h2 a{
+    color: rgba(212,174,141,.99); 
+    text-decoration: none !important;
+}
+
+
+.post-entry h2 a:visited {
+    color: rgba(212,174,141,.99);
+    text-decoration: none;
+}
+
+.post-entry p {
+    margin: 0;
+    font-weight: 300;
+    font-size: 18px;
+    text-decoration: none;
+    color: rgba(212,174,141,.99) !important; 
+    font-family: 'Lato', serif;
+}
+
+
+.post-entry h2 a:hover {
+    color: rgba(209, 131, 63, 0.99); 
+    text-decoration: underline;
+}
+
+footer{
+    font-family: 'Fredoka', sans-serif;
+    border-top: 2px solid rgba(212,174,141,.99) !important;
+    text-align: center;
+    color: rgba(212,174,141,.99); 
+}
+footer a{
+    color: rgba(212,174,141,.99);
+    text-decoration: underline;
+}
+
+footer ul li{
+    display: inline;
+    margin-right: 0.5rem;
+    font-size: 1rem;
+  }
+
+
+.edit a{
+    color: rgba(212,174,141,.99);
+    font-family: 'Fredoka', sans-serif;
+}
+.greetings{
+    font-family: 'Fredoka', sans-serif;
+    padding-left: 1rem;
+}
+
+#green{
+    color: rgba(212,174,141,.99); ;
+    font-weight: 600;
+}
+#red{
+    color: rgba(223, 67, 20, 0.99);
+}
+
+
